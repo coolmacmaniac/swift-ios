@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C828BBB01EB4AC0700947B53 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C828BBAF1EB4AC0700947B53 /* Person.swift */; };
 		C8ECBF0A1EB3A47800810821 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ECBF091EB3A47800810821 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C828BBAF1EB4AC0700947B53 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C8ECBF061EB3A47800810821 /* SwiftBasics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftBasics; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8ECBF091EB3A47800810821 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C8ECBF121EB3AF0200810821 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				C8ECBF081EB3A47800810821 /* SwiftBasics */,
+				C8ECBF101EB3AE8100810821 /* Config */,
 				C8ECBF071EB3A47800810821 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,8 +62,17 @@
 			isa = PBXGroup;
 			children = (
 				C8ECBF091EB3A47800810821 /* main.swift */,
+				C828BBAF1EB4AC0700947B53 /* Person.swift */,
 			);
 			path = SwiftBasics;
+			sourceTree = "<group>";
+		};
+		C8ECBF101EB3AE8100810821 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C8ECBF121EB3AF0200810821 /* Config.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C828BBB01EB4AC0700947B53 /* Person.swift in Sources */,
 				C8ECBF0A1EB3A47800810821 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

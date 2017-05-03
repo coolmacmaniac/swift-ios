@@ -10,17 +10,54 @@ import UIKit
 
 class ViewController: UIViewController {
 	
-	@IBOutlet weak var display: UILabel?
+	@IBOutlet private weak var display: UILabel!
 	
-	@IBAction func touchDigit(_ sender: UIButton) {
-		let digit = sender.currentTitle!
-		let textCurrentlyInDisplay = display!.text!
-		let value = Int(textCurrentlyInDisplay + digit)!
-		if 0 != value {
-			display?.text = String(value)
+	private var userIsInTheMiddleOfTyping = false
+	
+	private var displayValue: Double {
+		get {
+			return Double(display.text!)!
+		}
+		set {
+			display.text = String(newValue)
 		}
 	}
 	
+	private var displayString: String {
+		get {
+			return display.text!
+		}
+		set {
+			if display.text! == "0" && newValue == "0" {
+				return
+			}
+			display.text = newValue
+		}
+	}
+	
+	@IBAction private func touchDigit(_ sender: UIButton) {
+		let digit = sender.currentTitle!
+		if userIsInTheMiddleOfTyping {
+			displayString = displayString + digit
+		} else {
+			displayString = digit
+			if displayString != "0" {
+				userIsInTheMiddleOfTyping = true
+			}
+		}
+	}
+	
+	@IBAction func performOperation(_ sender: UIButton) {
+		userIsInTheMiddleOfTyping = false
+		if let symbol = sender.currentTitle {
+			switch symbol {
+			case "π": displayValue = Double.pi
+			case "e": displayValue = M_E
+			case "√": displayValue = sqrt(displayValue)
+			default: break
+			}
+		}
+	}
 	
 }
 

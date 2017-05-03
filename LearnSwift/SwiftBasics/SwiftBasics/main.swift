@@ -83,6 +83,13 @@ print("<\(optStr1!)>, <\(optStr2!)>")					// unwrapping is required explicitly
 print("<\(unwrappedString1)>, <\(unwrappedString2)>")	// unwrapping is done implicitly
 print("<\(normalString1)>, <\(normalString2)>")			// unwrapping is not required
 
+var str1: String? = "a"
+var str2: String! = "b"
+var str3 = str1
+var str4 = str2
+print("\(str1!) \(str2)")
+print("\(str3!) \(str4!)")
+
 //MARK: Optional (safe) behaviour propagated
 var p1 = Person("John", "Cena")			// p1 is of type Optional<Person> for inferred type
 print("\((p1?.firstName)!) \((p1?.lastName)!)")

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 	
 	private var userIsInTheMiddleOfTyping = false
 	
-	private var calculatorBrain = CalculatorBrain()
+	private var brain = CalculatorBrain()
 	
 	private var displayValue: Double {
 		get {
@@ -47,14 +47,14 @@ class ViewController: UIViewController {
 				userIsInTheMiddleOfTyping = true
 			}
 		}
-		calculatorBrain.setOperand(displayString)
 	}
 	
 	@IBAction func performOperation(_ sender: UIButton) {
 		userIsInTheMiddleOfTyping = false
 		if let symbol = sender.currentTitle {
-			calculatorBrain.doOperation(symbol)
-			displayString = calculatorBrain.result
+			brain.setOperand(displayValue)
+			brain.doOperation(symbol)
+			displayValue = brain.result
 		}
 	}
 	

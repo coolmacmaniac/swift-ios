@@ -10,24 +10,36 @@ import Foundation
 
 public class CalculatorBrain {
 	
-	private var accumulator: Double = 0.0
+	private var accumulator = 0.0
 	
-	public func setOperand(_ operand: String) -> Void {
-		accumulator = Double(operand)!
+	public func setOperand(_ operand: Double) {
+		accumulator = operand
 	}
 	
-	public func doOperation(_ symbol: String) -> Void {
-		switch symbol {
-		case "π": accumulator = Double.pi
-		case "e": accumulator = M_E
-		case "√": accumulator = sqrt(accumulator)
+	private let operation: [String: Operation] = [
+		"π": .Constant(Double.pi),
+		"e": .Constant(M_E),
+		"√": .UnaryOperation(sqrt)
+	]
+	
+	private enum Operation {
+		case Constant(Double)
+		case UnaryOperation((Double) -> Double)
+		case BinaryOperation((Double, Double) -> Double)
+		case Equals
+	}
+	
+	public func doOperation(_ symbol: String) {
+		switch operation[symbol]! {
+		case .Constant(let value): accumulator = value
+		case .UnaryOperation(let function): accumulator = function(accumulator)
 		default: break
 		}
 	}
 	
-	public var result: String {
+	public var result: Double {
 		get {
-			return String(accumulator)
+			return accumulator
 		}
 	}
 }

@@ -37,6 +37,10 @@ class ViewController: UIViewController {
 		}
 	}
 	
+	private var displayStringHasDot: Bool {
+		return displayString.contains(".")
+	}
+	
 	@IBAction private func touchDigit(_ sender: UIButton) {
 		let digit = sender.currentTitle!
 		if userIsInTheMiddleOfTyping {
@@ -58,5 +62,13 @@ class ViewController: UIViewController {
 		}
 	}
 	
+	@IBAction func touchDot(_ sender: UIButton) {
+		guard !displayStringHasDot else {
+			return
+		}
+		let digit = sender.currentTitle!
+		displayString = displayString + digit
+		userIsInTheMiddleOfTyping = true
+	}
 }
 

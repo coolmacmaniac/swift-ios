@@ -134,6 +134,7 @@
 				TargetAttributes = {
 					C8FE4DBA1EB8D93E00D6571B = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2F27NMC2Q7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -302,7 +303,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2F27NMC2Q7;
 				INFOPLIST_FILE = "Calculator/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.co.home.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -314,7 +317,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2F27NMC2Q7;
 				INFOPLIST_FILE = "Calculator/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.co.home.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";

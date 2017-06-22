@@ -10,6 +10,15 @@ import Foundation
 
 class Album {
 	
+	internal static let kKeys = "keys"
+	internal static let kValues = "values"
+	//
+	internal static let kArtist = "Artist"
+	internal static let kCoverUrl = "Cover-Url"
+	internal static let kGenre = "Genre"
+	internal static let kTitle = "Title"
+	internal static let kYear = "Year"
+	
 	public var title: String!
 	public var artist: String!
 	public var genre: String!
@@ -25,4 +34,5 @@ class Album {
 		self.year = year
 		
 	}
+	
 }

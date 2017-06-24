@@ -8,6 +8,6 @@
 
 import Foundation
 
-//`xcrun swift -version`
-print("Hello, World!")
-print("Welcome to the world of design patterns in Swift 3.1")
+print("Swift version = \(SwiftVersion.findSwiftLanguageVersion())")
+
+Driver.testAllDesignPatterns()

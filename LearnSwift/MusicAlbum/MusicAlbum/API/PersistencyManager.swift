@@ -6,7 +6,7 @@
 //  Copyright © 2017 Home. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PersistencyManager {
 	
@@ -34,7 +34,7 @@ class PersistencyManager {
 			title: "Nothing Like The Sun",
 			artist: "Sting",
 			genre: "Pop",
-			coverUrl: "http://is2.mzstatic.com/image/thumb/Music62/v4/cc/8b/a7/cc8ba718-1fc5-c609-d562-234e312da1c8/source/100x100bb.jpg",
+			coverUrl: "http://meloman.spb.ru/media/thumb/7/73/731454099325.jpg",
 			year: "1999")
 		)
 		
@@ -79,4 +79,37 @@ class PersistencyManager {
 			self.albums.remove(at: index)
 		}
 	}
+	
+	public func save(image: UIImage, withName name: String) {
+		let filePath = NSHomeDirectory().appendingFormat("/Documents/%@", name)
+		let data = UIImagePNGRepresentation(image)
+		do {
+			try data?.write(to: URL(fileURLWithPath: filePath), options: .atomic)
+		} catch {
+			print(error.localizedDescription)
+		}
+	}
+	
+	public func getImage(withName name: String) -> UIImage? {
+		let filePath = NSHomeDirectory().appendingFormat("/Documents/%@", name)
+		do {
+			let data = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
+			return UIImage(data: data)
+		} catch {
+			print(error.localizedDescription)
+		}
+		return nil
+	}
+	
+	public func deleteImage(withName name: String) {
+		let filePath = NSHomeDirectory().appendingFormat("/Documents/%@", name)
+		do {
+			if FileManager.default.fileExists(atPath: filePath) {
+				try FileManager.default.removeItem(at: URL(fileURLWithPath: filePath))
+			}
+		} catch {
+			print(error.localizedDescription)
+		}
+	}
+	
 }

@@ -19,6 +19,7 @@
 		C81B39701EFBF91C00E86F9A /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81B396F1EFBF91C00E86F9A /* HttpClient.swift */; };
 		C81B39721EFC147100E86F9A /* Album+TableRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81B39711EFC147100E86F9A /* Album+TableRepresentation.swift */; };
 		C81B39741EFC15A700E86F9A /* Album+JsonRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81B39731EFC15A700E86F9A /* Album+JsonRepresentation.swift */; };
+		C8297E271EFD814400B374C8 /* HorizontalScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8297E261EFD814400B374C8 /* HorizontalScroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C81B396F1EFBF91C00E86F9A /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		C81B39711EFC147100E86F9A /* Album+TableRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Album+TableRepresentation.swift"; sourceTree = "<group>"; };
 		C81B39731EFC15A700E86F9A /* Album+JsonRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Album+JsonRepresentation.swift"; sourceTree = "<group>"; };
+		C8297E261EFD814400B374C8 /* HorizontalScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalScroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C81B39691EFBE80A00E86F9A /* AlbumView.swift */,
+				C8297E261EFD814400B374C8 /* HorizontalScroller.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				C81B39701EFBF91C00E86F9A /* HttpClient.swift in Sources */,
 				C81B396A1EFBE80A00E86F9A /* AlbumView.swift in Sources */,
 				C81B39681EFBE6BB00E86F9A /* Album.swift in Sources */,
+				C8297E271EFD814400B374C8 /* HorizontalScroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +378,7 @@
 				C81B39531EFBE0BA00E86F9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

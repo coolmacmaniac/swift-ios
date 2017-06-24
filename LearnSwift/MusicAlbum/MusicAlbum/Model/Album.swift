@@ -19,11 +19,11 @@ class Album {
 	internal static let kTitle = "Title"
 	internal static let kYear = "Year"
 	
-	public var title: String!
-	public var artist: String!
-	public var genre: String!
-	public var coverUrl: String!
-	public var year: String!
+	public var title: String
+	public var artist: String
+	public var genre: String
+	public var coverUrl: String
+	public var year: String
 	
 	init(title: String, artist: String, genre: String, coverUrl: String, year: String) {
 		

@@ -39,9 +39,35 @@ class AlbumView: UIView {
 		self.indicator.activityIndicatorViewStyle = .whiteLarge
 		self.indicator.startAnimating()
 		self.addSubview(self.indicator)
+		
+		self.coverImage.addObserver(self, forKeyPath: "image", options: .new, context: nil)
+		
+		NotificationCenter.default.post(
+			name: NSNotification.Name(rawValue: "MADownloadImageNotification"),
+			object: self,
+			userInfo: ["coverImage": self.coverImage, "coverUrl": albumCover]
+		)
+		
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}
+	
+	deinit {
+		
+		self.coverImage.removeObserver(self, forKeyPath: "image")
+		
+	}
+	
+	override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+		
+		if let _keyPath = keyPath {
+			if _keyPath.isEqual("image") {
+				self.indicator.stopAnimating()
+			}
+		}
+		
+	}
+	
 }

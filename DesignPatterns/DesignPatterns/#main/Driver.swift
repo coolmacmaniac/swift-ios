@@ -18,6 +18,23 @@ class Driver {
 	
 	private class func testChainOfResponsibility() {
 		
+		let atm = DPAutomatedTellerMachine()
+		
+		let requestedCashList = [
+			640,
+			2400,
+			3150,
+			179,
+			10
+		]
+		
+		var cash: String!
+		for requestedCash in requestedCashList {
+			print("Withdrawing cash = INR \(requestedCash)")
+			cash = atm.withdrawCash(amount: requestedCash)
+			print("Dispensed denominations:", cash, separator: "\n", terminator: "")
+			print("====================================", terminator: "\n\n")
+		}
 	}
 	
 }

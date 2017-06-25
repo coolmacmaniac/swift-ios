@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8D046281EFE97B700A7F5B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D046271EFE97B700A7F5B9 /* main.swift */; };
+		C80F361A1EFFC91C0033261F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F36191EFFC91C0033261F /* main.swift */; };
 		C8D0462A1EFED9E400A7F5B9 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D046291EFED9E400A7F5B9 /* Driver.swift */; };
 		C8D0462C1EFEDFB100A7F5B9 /* SwiftVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D0462B1EFEDFB000A7F5B9 /* SwiftVersion.swift */; };
+		C8D0462F1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D0462E1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift */; };
+		C8D046311EFEE14700A7F5B9 /* DPCurrencyChest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D046301EFEE14700A7F5B9 /* DPCurrencyChest.swift */; };
+		C8D046351EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D046341EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C80F36191EFFC91C0033261F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = "DesignPatterns/#main/main.swift"; sourceTree = SOURCE_ROOT; };
 		C8D0461C1EFE966100A7F5B9 /* DesignPatterns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignPatterns; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8D046271EFE97B700A7F5B9 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = "../#main/main.swift"; sourceTree = "<group>"; };
 		C8D046291EFED9E400A7F5B9 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Driver.swift; path = "DesignPatterns/#main/Driver.swift"; sourceTree = SOURCE_ROOT; };
 		C8D0462B1EFEDFB000A7F5B9 /* SwiftVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftVersion.swift; path = "DesignPatterns/#main/SwiftVersion.swift"; sourceTree = SOURCE_ROOT; };
+		C8D0462E1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPAutomatedTellerMachine.swift; sourceTree = "<group>"; };
+		C8D046301EFEE14700A7F5B9 /* DPCurrencyChest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPCurrencyChest.swift; sourceTree = "<group>"; };
+		C8D046341EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPMoneyWithdrawable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D046261EFE97B700A7F5B9 /* #main */,
+				C8D0462D1EFEE09800A7F5B9 /* ChainOfResponsibility */,
 			);
 			path = DesignPatterns;
 			sourceTree = "<group>";
@@ -69,12 +76,22 @@
 		C8D046261EFE97B700A7F5B9 /* #main */ = {
 			isa = PBXGroup;
 			children = (
-				C8D046271EFE97B700A7F5B9 /* main.swift */,
+				C80F36191EFFC91C0033261F /* main.swift */,
 				C8D046291EFED9E400A7F5B9 /* Driver.swift */,
 				C8D0462B1EFEDFB000A7F5B9 /* SwiftVersion.swift */,
 			);
 			name = "#main";
 			path = main;
+			sourceTree = "<group>";
+		};
+		C8D0462D1EFEE09800A7F5B9 /* ChainOfResponsibility */ = {
+			isa = PBXGroup;
+			children = (
+				C8D0462E1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift */,
+				C8D046301EFEE14700A7F5B9 /* DPCurrencyChest.swift */,
+				C8D046341EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift */,
+			);
+			path = ChainOfResponsibility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D046311EFEE14700A7F5B9 /* DPCurrencyChest.swift in Sources */,
 				C8D0462C1EFEDFB100A7F5B9 /* SwiftVersion.swift in Sources */,
-				C8D046281EFE97B700A7F5B9 /* main.swift in Sources */,
+				C80F361A1EFFC91C0033261F /* main.swift in Sources */,
+				C8D046351EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift in Sources */,
+				C8D0462F1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift in Sources */,
 				C8D0462A1EFED9E400A7F5B9 /* Driver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +292,7 @@
 				C8D046251EFE966100A7F5B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

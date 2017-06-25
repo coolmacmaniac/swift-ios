@@ -8,6 +8,6 @@
 
 import Foundation
 
-print("Swift version = \(SwiftVersion.findSwiftLanguageVersion())")
+//print("Swift version = \(SwiftVersion.findSwiftLanguageVersion())")
 
 Driver.testAllDesignPatterns()

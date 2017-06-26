@@ -1,0 +1,13 @@
+Factory is a Creational design pattern
+
+[1]
+We create an object without revealing the creational logic to the client and refer to the newly created object using a common interface.
+
+[2]
+In simpler words, we have a super class and its N sub-classes, and based on the supplied value we need to return the object of one of the sub-classes.
+
+[3]
+The basic principle behind this pattern is that we can get the object of similar types at run time depending on the parameter we pass.
+
+[4]
+If the object creation code is spread across the entire application, and if we need to change the process of object creation at a later point in time, then we would have to go to each and every place to make necessary changes. This design pattern avoids such situations and makes it easier to update the object creation logic later on with minimum additional effort.

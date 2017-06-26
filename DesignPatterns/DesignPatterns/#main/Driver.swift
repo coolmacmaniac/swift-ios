@@ -12,7 +12,8 @@ class Driver {
 	
 	class func testAllDesignPatterns() {
 		
-		testChainOfResponsibility()
+//		testChainOfResponsibility()
+		testFactory()
 		
 	}
 	
@@ -37,4 +38,29 @@ class Driver {
 		}
 	}
 	
+	private class func testFactory() {
+		
+		let traversable = DPStack<String>()
+		
+		let names = [
+			"Sourabh",
+			"Gagan",
+			"Saksham",
+			"Mommy"
+		]
+		
+		for name in names {
+			print("Inserting an element: \(name)")
+			traversable.add(name)
+		}
+		
+		print("Traversing the elements: ")
+		traversable.traverse()
+		
+		while traversable.hasMore() {
+			let element = traversable.remove() ?? "nil"
+			print("Taking out an element: \(element)")
+		}
+		
+	}
 }

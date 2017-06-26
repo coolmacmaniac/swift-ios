@@ -35,6 +35,7 @@
 		C8D0462E1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPAutomatedTellerMachine.swift; sourceTree = "<group>"; };
 		C8D046301EFEE14700A7F5B9 /* DPCurrencyChest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPCurrencyChest.swift; sourceTree = "<group>"; };
 		C8D046341EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPMoneyWithdrawable.swift; sourceTree = "<group>"; };
+		C8FBA9131F00DE0A009EB803 /* Concept.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Concept.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 				C8D0462E1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift */,
 				C8D046301EFEE14700A7F5B9 /* DPCurrencyChest.swift */,
 				C8D046341EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift */,
+				C8FBA9131F00DE0A009EB803 /* Concept.txt */,
 			);
 			path = ChainOfResponsibility;
 			sourceTree = "<group>";

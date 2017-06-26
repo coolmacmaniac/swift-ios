@@ -26,12 +26,12 @@ class DPAutomatedTellerMachine {
 	
 	/// Specifies the sequence of all available currency denominations
 	private static let denominations: Array<DenominationTypes> = [
-		.One,
-		.Two,
-		.Five,
+//		.One,
+//		.Two,
+//		.Five,
 		.Ten,
-		.Twenty,
-		.Fifty,
+//		.Twenty,
+//		.Fifty,
 		.Hundred,
 		.FiveHundred,
 		.TwoThousand

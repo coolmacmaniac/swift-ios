@@ -1,0 +1,8 @@
+Chain of Responsibility is a Behavioural design pattern
+
+[1]
+It avoids coupling the sender of a request to its receiver by giving more than one receiver objects a chance to handle it. This detail is not visible to the sender.
+[2]
+It creates a chain of the receiving objects and passes the request along the chain until an object in the chain handles it, otherwise backpropagates an error gracefully.
+[3]
+Normally each receiver contains reference to the next receiver except the last one which does not have any further reference. If one receiver can not handle the request (partially or completely) then it passes the resultant request to the next receiver, if exists. Otherwise it optionally returns an error to the previous receiver.

@@ -115,6 +115,11 @@ class DPCurrencyChest: DPMoneyWithdrawable {
 		// check if the cash dispensable status of the remaining chain is false
 		// then return the error message returned from there
 		if .Failed == self.chainStatus {
+			
+			// the process failed, reset the notes kept aside
+			self.availableNotes += self.notesConsumed
+			self.notesConsumed = 0
+			
 			if let nextChest = self.nextChestInChain {
 				return nextChest.withdraw()
 			} else {

@@ -8,13 +8,19 @@
 
 import Foundation
 
+/**
+This class returns a traversable data structure of inherent type `T` with behaviour specified in `DPTraversableBehaviour`
+*/
 class DPDataStructureFactory<T> {
 	
-	public static func traversableObject(`as` type: DPTraversableBehaviour) -> DPTraversableType {
+	/**
+	Creates a data structure of type `DPTraversableType<T>` with behaviour specified in `DPTraversableBehaviour` enum
+	- parameter type: the behaviour of type `DPTraversableBehaviour`
+	- returns: the traversable data structure of type `DPTraversableType<T>`
+	*/
+	public func getDS(`as` type: DPTraversableBehaviour) -> DPTraversableType<T> {
 		
-		typealias U = T
-		
-		var object: DPTraversableType
+		var object: DPTraversableType<T>
 		switch type {
 		case .Stack:	object = DPStack<T>()
 		case .Queue:	object = DPQueue<T>()

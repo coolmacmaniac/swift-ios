@@ -40,27 +40,37 @@ class Driver {
 	
 	private class func testFactory() {
 		
-		let traversable = DPStack<String>()
-		
-		let names = [
-			"Sourabh",
-			"Gagan",
-			"Saksham",
-			"Mommy"
+		let dsTypes = [
+			DPTraversableBehaviour.Stack,
+			DPTraversableBehaviour.Queue,
 		]
 		
-		for name in names {
-			print("Inserting an element: \(name)")
-			traversable.add(name)
+		for type in dsTypes {
+			
+			let traversable = DPDataStructureFactory<String>().getDS(as: type)
+			
+			let names = [
+				"Sourabh",
+				"Gagan",
+				"Saksham",
+				"Mommy"
+			]
+			
+			print("===============\(type)================")
+			for name in names {
+				print("Inserting an element: \(name)")
+				traversable.add(name)
+			}
+			
+			print("Traversing the elements: ")
+			traversable.traverse()
+			
+			while traversable.hasMore() {
+				let element = traversable.remove() ?? "nil"
+				print("Taking out an element: \(element)")
+			}
+			
+			print("====================================", terminator: "\n\n")
 		}
-		
-		print("Traversing the elements: ")
-		traversable.traverse()
-		
-		while traversable.hasMore() {
-			let element = traversable.remove() ?? "nil"
-			print("Taking out an element: \(element)")
-		}
-		
 	}
 }

@@ -24,33 +24,36 @@ enum DPTraversableBehaviour {
 }
 
 /**
-This protocol has to be conformed by all objects that want to provide a traversable feature to the client.
+In programming there is a concept known as a **thunk** that can help us out with the shortcoming of generic protocols! A thunk is a helper struct/class that forwards calls from one object to another object. This is useful for scenarios where those two objects can't normally talk to one another. Using this, we can effectively erase our abstract generic protocol types in favor of another concrete, more fully-fledged type. This is often referred to as type erasure.
+
+By creating a class that conforms to our original protocol and uses generics, we can more explicitly define our protocol's associated type.
 */
-protocol DPTraversableType: class {
+class DPTraversableType<T>: DPTraversable {
 	
-	/// the associated type to be used for actual element types
-	associatedtype U
+	// type erasure
+	typealias TypeName = T
 	
-	/**
-	This method adds an element of type `T` to the concrete traversable object, it changes the state of traversable object.
-	- parameter element: A concrete object of type `T`
-	*/
-	func add(_ element: U)
+	//MARK: - DPTraversable type erasure default implementations
 	
-	/**
-	This method removes the last inserted element of type `T` from the concrete traversable object, if there is no last inserted element then it does not change the state of traversable object.
-	- returns: A concrete object of type `T` or nil
-	*/
-	func remove() -> U?
+	public func add(_ element: T) {
+		
+		// needs to be overridden by the actual implementation class
+	}
 	
-	/**
-	This method specifies if there exist more elements in the traversable object.
-	- returns: true if there are more elements, false otherwise
-	*/
-	func hasMore() -> Bool
+	public func remove() -> T? {
+		
+		// needs to be overridden by the actual implementation class
+		return nil
+	}
 	
-	/**
-	This method traverses all the elements in a well defined order according to the traversable object's behaviour.
-	*/
-	func traverse()
+	public func hasMore() -> Bool {
+		
+		// needs to be overridden by the actual implementation class
+		return false
+	}
+	
+	public func traverse() {
+		
+		// needs to be overridden by the actual implementation class
+	}
 }

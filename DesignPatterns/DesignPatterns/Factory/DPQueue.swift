@@ -8,7 +8,10 @@
 
 import Foundation
 
-class DPQueue<T>: DPTraversableType {
+/**
+Queue implementation of traversable data structure of type `DPTraversableType<T>`
+*/
+class DPQueue<T>: DPTraversableType<T> {
 	
 	/**
 	A reference to the element of type `DPTraversableElement<T>` at the rear of the queue, may also be nil if the queue is empty
@@ -20,7 +23,7 @@ class DPQueue<T>: DPTraversableType {
 	*/
 	private var front: DPTraversableElement<T>?
 	
-	init() {
+	override init() {
 		
 		rear = nil
 		front = nil
@@ -28,7 +31,7 @@ class DPQueue<T>: DPTraversableType {
 	
 	//MARK: - DPTraversableType methods
 	
-	public func add(_ element: T) {
+	public override func add(_ element: T) {
 		
 		let object = DPTraversableElement<T>(value: element)
 		
@@ -48,7 +51,7 @@ class DPQueue<T>: DPTraversableType {
 		}
 	}
 	
-	public func remove() -> T? {
+	public override func remove() -> T? {
 		
 		// elements are removed from the front of the queue
 		if nil == front {
@@ -71,12 +74,12 @@ class DPQueue<T>: DPTraversableType {
 		return object!.value
 	}
 	
-	public func hasMore() -> Bool {
+	public override func hasMore() -> Bool {
 		
 		return nil != front
 	}
 	
-	public func traverse() {
+	public override func traverse() {
 		
 		var element = front
 		while nil != element {

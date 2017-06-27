@@ -8,21 +8,24 @@
 
 import Foundation
 
-class DPStack<T>: DPTraversableType {
+/**
+Stack implementation of traversable data structure of type `DPTraversableType<T>`
+*/
+class DPStack<T>: DPTraversableType<T> {
 	
 	/**
 	A reference to the element of type `DPTraversableElement<T>` at the top of the stack, may also be nil if the stack is empty
 	*/
 	private var top: DPTraversableElement<T>?
 	
-	init() {
+	override init() {
 		
 		top = nil
 	}
 	
 	//MARK: - DPTraversableType methods
 	
-	public func add(_ element: T) {
+	public override func add(_ element: T) {
 		
 		let object = DPTraversableElement<T>(value: element)
 		
@@ -35,7 +38,7 @@ class DPStack<T>: DPTraversableType {
 		top = object
 	}
 	
-	public func remove() -> T? {
+	public override func remove() -> T? {
 		
 		if nil == top {
 			// if the stack is empty then there is nothing to return
@@ -51,12 +54,12 @@ class DPStack<T>: DPTraversableType {
 		return object!.value
 	}
 	
-	public func hasMore() -> Bool {
+	public override func hasMore() -> Bool {
 		
 		return nil != top
 	}
 	
-	public func traverse() {
+	public override func traverse() {
 		
 		var element = top
 		while nil != element {

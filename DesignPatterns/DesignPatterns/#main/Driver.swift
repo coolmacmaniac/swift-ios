@@ -43,6 +43,7 @@ class Driver {
 		let dsTypes = [
 			DPTraversableBehaviour.Stack,
 			DPTraversableBehaviour.Queue,
+			DPTraversableBehaviour.Tree
 		]
 		
 		for type in dsTypes {

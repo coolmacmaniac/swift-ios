@@ -20,7 +20,7 @@ enum DPTraversableBehaviour {
 	/// the traversable object to behave like a FIFO queue
 	case Queue
 	/// the traversable object to behave like a binary search tree
-	//case Tree
+	case Tree
 }
 
 /**

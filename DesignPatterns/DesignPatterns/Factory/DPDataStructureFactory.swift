@@ -24,6 +24,7 @@ class DPDataStructureFactory<T> {
 		switch type {
 		case .Stack:	object = DPStack<T>()
 		case .Queue:	object = DPQueue<T>()
+		case .Tree:		object = DPBinaryTree<T>()
 		}
 		
 		return object

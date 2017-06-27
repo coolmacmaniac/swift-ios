@@ -15,6 +15,7 @@
 		C8D046351EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D046341EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift */; };
 		C8E4FC4A1F02B2850030A3E6 /* DPDataStructureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4FC491F02B2850030A3E6 /* DPDataStructureFactory.swift */; };
 		C8E4FC4C1F02CB570030A3E6 /* DPTraversable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4FC4B1F02CB570030A3E6 /* DPTraversable.swift */; };
+		C8E4FC4E1F02DD200030A3E6 /* DPBinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4FC4D1F02DD200030A3E6 /* DPBinaryTree.swift */; };
 		C8FBA9161F012DCD009EB803 /* DPTraversableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBA9151F012DCD009EB803 /* DPTraversableType.swift */; };
 		C8FBA9191F013197009EB803 /* DPTraversableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBA9181F013197009EB803 /* DPTraversableElement.swift */; };
 		C8FBA91B1F0136B5009EB803 /* DPStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBA91A1F0136B5009EB803 /* DPStack.swift */; };
@@ -43,6 +44,7 @@
 		C8D046341EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPMoneyWithdrawable.swift; sourceTree = "<group>"; };
 		C8E4FC491F02B2850030A3E6 /* DPDataStructureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDataStructureFactory.swift; sourceTree = "<group>"; };
 		C8E4FC4B1F02CB570030A3E6 /* DPTraversable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPTraversable.swift; sourceTree = "<group>"; };
+		C8E4FC4D1F02DD200030A3E6 /* DPBinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPBinaryTree.swift; sourceTree = "<group>"; };
 		C8FBA9131F00DE0A009EB803 /* Concept.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Concept.txt; sourceTree = "<group>"; };
 		C8FBA9151F012DCD009EB803 /* DPTraversableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPTraversableType.swift; sourceTree = "<group>"; };
 		C8FBA9171F012DDF009EB803 /* Concept.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Concept.txt; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C8FBA9151F012DCD009EB803 /* DPTraversableType.swift */,
 				C8FBA91A1F0136B5009EB803 /* DPStack.swift */,
 				C8FBA91C1F01847D009EB803 /* DPQueue.swift */,
+				C8E4FC4D1F02DD200030A3E6 /* DPBinaryTree.swift */,
 				C8FBA9171F012DDF009EB803 /* Concept.txt */,
 			);
 			path = Factory;
@@ -191,6 +194,7 @@
 				C80F361A1EFFC91C0033261F /* main.swift in Sources */,
 				C8FBA91D1F01847D009EB803 /* DPQueue.swift in Sources */,
 				C8D046351EFEE5C900A7F5B9 /* DPMoneyWithdrawable.swift in Sources */,
+				C8E4FC4E1F02DD200030A3E6 /* DPBinaryTree.swift in Sources */,
 				C8E4FC4A1F02B2850030A3E6 /* DPDataStructureFactory.swift in Sources */,
 				C8D0462F1EFEE10800A7F5B9 /* DPAutomatedTellerMachine.swift in Sources */,
 				C8FBA9191F013197009EB803 /* DPTraversableElement.swift in Sources */,

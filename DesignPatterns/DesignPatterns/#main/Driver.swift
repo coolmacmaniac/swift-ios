@@ -46,28 +46,37 @@ class Driver {
 			DPTraversableBehaviour.Tree
 		]
 		
-		for type in dsTypes {
+		let values = [
+			"Sourabh",
+			"Gagan",
+			"Saksham",
+			"Mommy"
+		]
+		
+//		let values = [
+//			31,
+//			97,
+//			43,
+//			29
+//		]
+		
+		let elementType = type(of: values).Element.self
+		
+		for dsType in dsTypes {
 			
-			let traversable = DPDataStructureFactory<String>().getDS(as: type)
+			let traversable = DPDataStructureFactory.getDS(as: dsType, of: elementType)
 			
-			let names = [
-				"Sourabh",
-				"Gagan",
-				"Saksham",
-				"Mommy"
-			]
-			
-			print("===============\(type)================")
-			for name in names {
-				print("Inserting an element: \(name)")
-				traversable.add(name)
+			print("===============\(dsType)================")
+			for value in values {
+				print("Inserting an element: \(value)")
+				traversable.add(value)
 			}
 			
 			print("Traversing the elements: ")
 			traversable.traverse()
 			
 			while traversable.hasMore() {
-				let element = traversable.remove() ?? "nil"
+				let element = traversable.remove()!
 				print("Taking out an element: \(element)")
 			}
 			

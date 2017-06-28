@@ -9,10 +9,10 @@
 import Foundation
 
 /**
-Binary tree implementation of traversable data structure of type `DPTraversableType<T>`
+Binary tree implementation of traversable data structure of type `DPTraversableType<T>` where `T` has to conform to `Comparable` protocol
 */
-class DPBinaryTree<T>: DPTraversableType<T> {
-	
+class DPBinaryTree<T: Comparable>: DPTraversableType<T> {
+
 	/**
 	A reference to the element of type `DPTraversableElement<T>` at the root node, may also be nil if the tree does not exist
 	*/
@@ -33,11 +33,10 @@ class DPBinaryTree<T>: DPTraversableType<T> {
 	case Greater
 	}
 	
-	//FIXME: do it for generic type
 	/**
-	Compares two string objects lexicographically by ignoring the case
-	- parameter str1: the first string to be compared
-	- parameter str2: the second string to be compared
+	Compares two objects of `Comparable` types `T` lexicographically by ignoring the case
+	- parameter first: the first object to be compared
+	- parameter second: the second object to be compared
 	- returns: any of the values specified in `Compared` enum
 	*/
 	private func compare(_ first: T, with second: T) -> Compared {
@@ -51,18 +50,14 @@ class DPBinaryTree<T>: DPTraversableType<T> {
 			}
 		}
 		else {
-			let x = first as! NSValue
-			let y = second as! NSValue
-			if x < y {
+			if first < second {
 				return .Lesser
-			} else if x > y {
+			} else if first > second {
 				return .Greater
 			} else {
 				return .Equal
 			}
 		}
-		
-		return Compared.Equal
 	}
 	
 	//MARK: - DPTraversableType methods
@@ -148,20 +143,28 @@ class DPBinaryTree<T>: DPTraversableType<T> {
 	
 	public override func traverse() {
 		
+		// a stack is required to keep the visited nodes for inorder traversal
 		let stack = DPStack<DPTraversableElement<T>>()
 		
 		var element = node
 		repeat {
+			
+			// move to a node which does not have a left subtree
+			// while doing that keep the visited nodes on a stack
 			while nil != element {
 				stack.add(element!)
 				element = element!.previous
 			}
 			
+			// pop the recently visited leaf node out of the stack & print it
 			element = stack.remove()
 			print("[\(element!.value)]", terminator: "->")
 			
+			// move to the right node of the visited node to traverse it in inorder
 			element = element!.next
-		} while stack.hasMore()
+			
+			// repeat while we have nodes left in stack or the right subtree of visited node exists
+		} while stack.hasMore()	|| nil != element
 		
 		print("[/]")
 	}

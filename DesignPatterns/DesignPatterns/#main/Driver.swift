@@ -13,8 +13,8 @@ class Driver {
 	class func testAllDesignPatterns() {
 		
 //		testChainOfResponsibility()
-		testFactory()
-		
+//		testFactory()
+		testAbstractFactory()
 	}
 	
 	private class func testChainOfResponsibility() {
@@ -81,6 +81,34 @@ class Driver {
 			}
 			
 			print("====================================", terminator: "\n\n")
+		}
+	}
+	
+	private class func testAbstractFactory() {
+		
+		let formats = [
+			DPNumberBase.binary,
+			DPNumberBase.octal,
+			DPNumberBase.hexadecimal
+		]
+		
+		let values = [
+			99,
+			127,
+			254,
+			123456,
+			65535
+		]
+		
+		var factory: DPNumberFactory
+		for value in values {
+			print("Converting \(value) from base 10:")
+			for format in formats {
+				factory = DPNumberHelper.factory(withBase: format)
+				let conversion = factory(value).convertBase()
+				print("to base \(format.rawValue) = \(conversion)")
+			}
+			print()
 		}
 	}
 }

@@ -12,6 +12,7 @@
 		C8963C502009D9F500412E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8963C4E2009D9F500412E6D /* Main.storyboard */; };
 		C8963C522009D9F500412E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8963C512009D9F500412E6D /* Assets.xcassets */; };
 		C8963C552009D9F500412E6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8963C532009D9F500412E6D /* LaunchScreen.storyboard */; };
+		C8963C5D2009E08100412E6D /* DynamicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8963C5C2009E08100412E6D /* DynamicListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C8963C512009D9F500412E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8963C542009D9F500412E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8963C562009D9F500412E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8963C5C2009E08100412E6D /* DynamicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				C8963C4A2009D9F500412E6D /* AppDelegate.swift */,
 				C8963C4C2009D9F500412E6D /* ViewController.swift */,
+				C8963C5C2009E08100412E6D /* DynamicListViewController.swift */,
 				C8963C4E2009D9F500412E6D /* Main.storyboard */,
 				C8963C512009D9F500412E6D /* Assets.xcassets */,
 				C8963C532009D9F500412E6D /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				C8963C4D2009D9F500412E6D /* ViewController.swift in Sources */,
 				C8963C4B2009D9F500412E6D /* AppDelegate.swift in Sources */,
+				C8963C5D2009E08100412E6D /* DynamicListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,3 +42,14 @@ struct DPHexadecimal: DPBaseNumber {
 		return result
 	}
 }
+
+
+typealias Test1 = DPHexadecimal
+extension Test1 {
+	func a() {}
+}
+
+typealias Test2 = DPHexadecimal
+extension Test2 {
+	func b() {}
+}

@@ -80,13 +80,38 @@
                                 </connections>
                             </slider>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-34-esD" customClass="FaceView" customModule="FaceIt" customModuleProvider="target">
-                                <rect key="frame" x="16" y="134" width="343" height="513"/>
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="0.90000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="eyebrowTilt">
+                                        <real key="value" value="-0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="mouthCurvature">
+                                        <real key="value" value="-0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pathColor">
+                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="eyesOpen" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MGD-pN-6rB" appends="YES" id="MMu-d7-LEe"/>
+                                    <outletCollection property="gestureRecognizers" destination="t2f-Ny-iTB" appends="YES" id="BiF-eP-HQO"/>
+                                    <outletCollection property="gestureRecognizers" destination="a6x-X8-G2Z" appends="YES" id="r5W-Oo-Lew"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QjK-tk-aO8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2kp-ld-8rq"/>
+                            <constraint firstItem="Lev-34-esD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="42w-4r-s5t"/>
                             <constraint firstItem="QjK-tk-aO8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4k6-jL-RSh"/>
                             <constraint firstItem="C9b-Wc-wAM" firstAttribute="top" secondItem="nau-6b-VQf" secondAttribute="bottom" constant="8" id="6hM-uw-vQH"/>
                             <constraint firstItem="3ps-9g-DfX" firstAttribute="leading" secondItem="QjK-tk-aO8" secondAttribute="trailing" constant="8" id="8KC-4h-YCb"/>
@@ -102,7 +127,6 @@
                             <constraint firstItem="zSf-uj-OED" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fX3-nQ-Wti"/>
                             <constraint firstItem="C9b-Wc-wAM" firstAttribute="leading" secondItem="Blb-DB-XwD" secondAttribute="trailing" constant="8" id="h2I-Pq-Krf"/>
                             <constraint firstItem="zSf-uj-OED" firstAttribute="top" secondItem="QjK-tk-aO8" secondAttribute="bottom" constant="8" id="jQX-F2-ic6"/>
-                            <constraint firstItem="Lev-34-esD" firstAttribute="top" secondItem="C9b-Wc-wAM" secondAttribute="bottom" constant="8" id="mlw-wj-xhY"/>
                             <constraint firstItem="nau-6b-VQf" firstAttribute="top" secondItem="3ps-9g-DfX" secondAttribute="bottom" constant="8" id="pAD-X9-HCa"/>
                             <constraint firstItem="3ps-9g-DfX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xHE-TW-0AP"/>
                         </constraints>
@@ -112,6 +136,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MGD-pN-6rB">
+                    <connections>
+                        <action selector="toggleEyes:" destination="BYZ-38-t0r" id="a6e-Dv-REo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <rotationGestureRecognizer id="t2f-Ny-iTB">
+                    <connections>
+                        <action selector="relaxEyebrows:" destination="BYZ-38-t0r" id="yhm-7X-m6T"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="a6x-X8-G2Z">
+                    <connections>
+                        <action selector="frownEyebrows:" destination="BYZ-38-t0r" id="Vgn-VA-mVN"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>

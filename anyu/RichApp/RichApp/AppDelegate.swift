@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  FaceIt
+//  RichApp
 //
-//  Created by Sourabh on 08/05/17.
-//  Copyright © 2017 Home. All rights reserved.
+//  Created by Sourabh on 04/03/18.
+//  Copyright © 2018 Home. All rights reserved.
 //
 
 import UIKit
@@ -16,12 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		
-		var swiftarray: Array<String> = []
-		// Fill the array with objects
-		var str: NSString = (swiftarray as NSArray).value(forKey: #keyPath(key.path)) as! NSString
-
-		
 		return true
 	}
 

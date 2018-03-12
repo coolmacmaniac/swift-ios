@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		startNewRound()
+		startNewGame()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -76,6 +76,13 @@ class ViewController: UIViewController {
 		self.present(alert, animated: true, completion: nil)
 	}
 	
+	@IBAction func startNewGame() {
+		currentValue = 0
+		score = 0
+		round = 0
+		startNewRound()
+	}
+	
 	// MARK: -
 	
 	func popupHandler(_ action: UIAlertAction) {
@@ -95,6 +102,7 @@ class ViewController: UIViewController {
 		slider.value = Float(currentValue)
 		updateLabels()
 	}
+	
 	
 	
 }

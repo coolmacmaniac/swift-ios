@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81A676C2060340800AB166D /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = C81A676B2060340800AB166D /* BullsEye.html */; };
 		C8415A4620546BB1003DF62E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8415A4520546BB1003DF62E /* AppDelegate.swift */; };
 		C8415A4820546BB1003DF62E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8415A4720546BB1003DF62E /* ViewController.swift */; };
 		C8415A4B20546BB1003DF62E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8415A4920546BB1003DF62E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C81A676B2060340800AB166D /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		C8415A4220546BB1003DF62E /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8415A4520546BB1003DF62E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8415A4720546BB1003DF62E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				C8CB4AA620570648006DD3D5 /* AboutMeViewController.swift */,
 				C8415A4920546BB1003DF62E /* Main.storyboard */,
 				C8415A4C20546BB1003DF62E /* Assets.xcassets */,
+				C81A676B2060340800AB166D /* BullsEye.html */,
 				C8415A4E20546BB1003DF62E /* LaunchScreen.storyboard */,
 				C8415A5120546BB1003DF62E /* Info.plist */,
 			);
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8415A5020546BB1003DF62E /* LaunchScreen.storyboard in Resources */,
+				C81A676C2060340800AB166D /* BullsEye.html in Resources */,
 				C8415A4D20546BB1003DF62E /* Assets.xcassets in Resources */,
 				C8415A4B20546BB1003DF62E /* Main.storyboard in Resources */,
 			);

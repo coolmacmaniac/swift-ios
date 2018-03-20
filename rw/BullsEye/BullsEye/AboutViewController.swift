@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import WebKit
 
 class AboutViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var webView: WKWebView!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		
+		if let fileUrl = Bundle.main.url(forResource: "BullsEye", withExtension: "html") {
+			if let htmlData = try? Data(contentsOf: fileUrl) {
+				let baseUrl = Bundle.main.bundleURL
+				webView.load(htmlData, mimeType: "text/html", characterEncodingName: "UTF-8", baseURL: baseUrl)
+			}
+		}
+		
     }
 
     override func didReceiveMemoryWarning() {
